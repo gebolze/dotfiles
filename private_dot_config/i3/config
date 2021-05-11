@@ -215,3 +215,8 @@ bar {
 
 	status_command i3status -c ~/.config/i3status/i3status.conf
 }
+
+assign [class="firefox"] $ws2
+assign [class="Slack"] $ws3
+assign [class="org.remmina.Remmina"] $ws6
+
