@@ -15,7 +15,7 @@
 DRIVE_NAME="gdrive"
 
 # Name and locations of the passwords file
-DB_FILE_NAME="Passwords.kdbx"
+DB_FILE_NAME="Gebolze Passwords.kdbx"
 LOCAL_LOCATION="$HOME/Documents"
 REMOTE_LOCATION="Documents"
 
@@ -26,8 +26,8 @@ LOCAL_PATH="$LOCAL_LOCATION/$DB_FILE_NAME"
 REMOTE_PATH="$REMOTE_LOCATION/$DB_FILE_NAME"
 
 # Alias import and export commands and make them available within the functions
-alias passwords_export="rclone copy $LOCAL_PATH $DRIVE_NAME:$REMOTE_LOCATION"
-alias passwords_import="rclone copy $DRIVE_NAME:$REMOTE_PATH $LOCAL_LOCATION"
+alias passwords_export="rclone copy '$LOCAL_PATH' '$DRIVE_NAME:$REMOTE_LOCATION'"
+alias passwords_import="rclone copy '$DRIVE_NAME:$REMOTE_PATH' '$LOCAL_LOCATION'"
 shopt -s expand_aliases
 
 function format_datetime_from_string()
@@ -38,7 +38,7 @@ function format_datetime_from_string()
 # Parse local passwords file modification time using the stat command
 function get_local_passwords_mtime()
 {
-    local string=`stat -c %y $LOCAL_PATH | cut -d ' ' -f 1,2;`
+    local string=`stat -c %y "$LOCAL_PATH" | cut -d ' ' -f 1,2;`
     echo `format_datetime_from_string "$string"`
 }
 
@@ -46,7 +46,7 @@ function get_local_passwords_mtime()
 # See: https://rclone.org/commands/rclone_lsl/
 function get_remote_passwords_mtime()
 {
-    output=`rclone lsl $DRIVE_NAME:$REMOTE_PATH 2>/dev/null`
+    output=`rclone lsl "$DRIVE_NAME:$REMOTE_PATH" 2>/dev/null`
     if [ $? -eq 3 ]; then
         unset output
         return 1
