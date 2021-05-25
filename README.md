@@ -12,5 +12,6 @@
   - [feh](https://feh.finalrewind.org/) - used to set wallpapers
   - icon theme: [papirus dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
   - gtk theme: [ark dark](https://github.com/jnsh/arc-theme)
+  - screenshots: [flameshot](https://github.com/flameshot-org/flameshot)
 - Arch Linux specific
   - AUR Helper: [rua](https://github.com/vn971/rua)
