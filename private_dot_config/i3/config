@@ -229,6 +229,7 @@ bar {
 
 assign [class="firefox"] $ws2
 assign [class="Slack"] $ws3
+assign [class="webex"] $ws3
 assign [class="org.remmina.Remmina"] $ws6
 assign [class="jetbrains-rider"] $ws10
 
