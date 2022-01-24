@@ -3,5 +3,7 @@ font:
     family: "Source Code Pro"
   size: 11.0
 
-background_opacity: 0.8
+window:
+  opacity: 0.8
+
 live_config_reload: true
