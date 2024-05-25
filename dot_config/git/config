@@ -1,3 +1,5 @@
-[user]
-	name = Gebolze
-	email = gebolze@gmail.com
+[include]
+	path = "~/.config/git/config-personal"
+
+[includeIf "gitdir:~/code/work/"]
+	path = "~/.config/git/config-work"
