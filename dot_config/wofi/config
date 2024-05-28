@@ -1,0 +1,11 @@
+width=600
+height=300
+location=center
+show=drun
+prompt=Search...
+allow_markup=true
+no_actions=true
+insensitive=true
+allow_images=true
+image_size=40
+dynamic_lines=true
