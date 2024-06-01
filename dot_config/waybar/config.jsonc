@@ -20,14 +20,9 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "cpu",
         "memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
-        "battery",
-        "battery#bat2",
+        "temperature#water",
         "clock",
         "tray"
     ],
@@ -123,12 +118,14 @@
     "memory": {
         "format": "{}% "
     },
-    "temperature": {
+    "temperature#water": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+	"hwmon-path-abs": "/sys/devices/platform/nct6775.656/hwmon",
+	"input-filename": "temp6_input",
+        "critical-threshold": 45,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "󰖌 {temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
