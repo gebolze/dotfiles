@@ -33,11 +33,11 @@ progress-color=over #89b4fa
 
 [urgency=low]
 border-color=#313244
-default-timeout=5000
+default-timeout=10000
 
 [urgency=normal]
 border-color=#313244
-default-timeout=5000
+default-timeout=10000
 
 [urgency=high]
 border-color=#f38ba8
