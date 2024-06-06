@@ -1,7 +1,6 @@
 # Global
 max-history=100
 sort=-time
-output=DP-1
 
 # Binding Options
 on-button-middle=dismiss-all
