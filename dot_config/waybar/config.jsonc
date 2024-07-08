@@ -121,12 +121,12 @@
     "temperature#water": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-	"hwmon-path-abs": "/sys/devices/platform/nct6775.656/hwmon",
-	"input-filename": "temp6_input",
+        "hwmon-path-abs": "/sys/devices/platform/nct6775.656/hwmon",
+        "input-filename": "temp6_input",
         "critical-threshold": 45,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "󰖌 {temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
